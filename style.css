@@ -8,13 +8,13 @@ textarea {
 }
 
 .present-hour {
-  background-color: crimson;
-  border-color: crimson;
+  background-color: maroon;
+  border-color: maroon;
 }
 
 .future-hour {
-  background-color: rgb(90, 177, 90);
-  border-color: rgb(41, 136, 41);
+  background-color: green;
+  border-color: green;
 }
 
 button {
@@ -23,7 +23,7 @@ button {
 }
 
 header {
-  border-bottom-width: 10px;
+  border-bottom-width: 5px;
   color: red;
 }
 

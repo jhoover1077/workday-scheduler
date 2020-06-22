@@ -23,9 +23,9 @@ let dayofWeek = {
   
   let counts = 1;
   for(const property in dayofWeek) {
-    let txtentry = "#text-entry" + counts;
+    let txtentry = "#text" + counts;
     $(txtentry).text(dayofWeek[property]);
-    let timeId = "#time" + counts;
+    let timeId = "#timeset" + counts;
     let phour = moment().hour();
     let tString = $(timeId).text();
     let tnum = numhours(tString);  
