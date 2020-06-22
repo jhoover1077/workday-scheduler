@@ -21,22 +21,22 @@ let dayofWeek = {
   
   $('#date h2').text(moment().format('dddd') + ", " + moment().format('MMMM Do YYYY, h:mm:ss a'));
   
-  let counter = 1;
+  let counts = 1;
   for(const property in dayofWeek) {
-    let textEntry = "#text-entry" + counter;
-    $(textEntry).text(dayofWeek[property]);
-    let timeId = "#time" + counter;
+    let txtentry = "#text-entry" + counts;
+    $(txtentry).text(dayofWeek[property]);
+    let timeId = "#time" + counts;
     let phour = moment().hour();
     let tString = $(timeId).text();
     let tnum = hourNumberFromhours(tString);  
     if(tnum < phour) {
-      $(textEntry).addClass("past-hour");
+      $(txtentry).addClass("past-hour");
     } else if (tnum > phour) {
-      $(textEntry).addClass("future-hour");
+      $(txtentry).addClass("future-hour");
     } else {
-      $(textEntry).addClass("present-hour");
+      $(txtentry).addClass("present-hour");
     }
-    counter ++;
+    counts ++;
   }
   
   $("button").click(function() {
@@ -87,7 +87,7 @@ let dayofWeek = {
   
   function calendarChange(section) {
     $(".calendar-row").each(function(index) {
-      let res = $(this).children("div");
-      $(this).children("textarea").text(section[res.text()]);
+      let reset = $(this).children("div");
+      $(this).children("textarea").text(section[reset.text()]);
     })
   }
