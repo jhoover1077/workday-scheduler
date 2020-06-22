@@ -28,7 +28,7 @@ let dayofWeek = {
     let timeId = "#time" + counts;
     let phour = moment().hour();
     let tString = $(timeId).text();
-    let tnum = hourNumberFromhours(tString);  
+    let tnum = numhours(tString);  
     if(tnum < phour) {
       $(txtentry).addClass("past-hour");
     } else if (tnum > phour) {
@@ -43,10 +43,10 @@ let dayofWeek = {
     value = $(this).siblings("textarea").val();
     hours = $(this).siblings("div").text();
     
-    saveSchedule(hours, value);
+    newsched(hours, value);
   });
   
-  function hourNumberFromhours(hours) {
+  function numhours(hours) {
     switch(hours) {
       case "8 AM": return 8;
       case "9 AM": return 9;
@@ -61,28 +61,28 @@ let dayofWeek = {
     }
   }
   
-  function loadCorrectDataset() {
+  function loadData() {
     result = localStorage.getItem('dayofWeek')
     return (result ? result : dayofWeek);
   }
   
-  function initializeLocalStorage() {
+  function initialLocal() {
     localStorage.setItem('dayofWeek', JSON.stringify(dayofWeek));
   };
   
-  function saveToLocalStorage(objDays) {
+  function localSave(objDays) {
     localStorage.setItem('dayofWeek', JSON.stringify(objDays));
   }
   
-  function saveSchedule(hours, val) {
+  function newsched(hours, val) {
     if(!localStorage.getItem('dayofWeek')) {
-      initializeLocalStorage();
+      initialLocal();
     }
   
     let workHours = JSON.parse(localStorage.getItem('dayofWeek'));
     workHours[hours] = val
   
-    saveToLocalStorage(workHours);
+    localSave(workHours);
   }
   
   function calendarChange(section) {
