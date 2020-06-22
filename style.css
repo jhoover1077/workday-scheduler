@@ -1,3 +1,18 @@
+.saveBtn {
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06AED5;
+  color: white;
+  font-size: 1.3em;
+  padding-bottom: 15px;
+}
+
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+}
+
 textarea {
   resize: none;
 }
@@ -29,18 +44,4 @@ header {
 
 button {
   font-size: 2em;
-}
-.saveBtn {
-  border: none;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-  font-size: 1.3em;
-  padding-bottom: 15px;
-}
-
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
 }
