@@ -18,7 +18,7 @@ textarea {
 }
 
 .past-hour {
-  background-color: rgb(189, 189, 189);
+  background-color: lightgray;
   border-color: gray;
 }
 
@@ -33,15 +33,15 @@ textarea {
 }
 
 button {
-  background-color: darkturquoise;
-  border-radius: 0px 5px 5px 0px;
+  background-color: lightblue;
+  border-radius: 0px 10px 10px 0px;
 }
 
 header {
-  border-bottom-width: 5px;
+  border-bottom-width: 10px;
   color: red;
 }
 
 button {
-  font-size: 2em;
+  font-size: 3em;
 }
